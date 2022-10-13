@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <MainMenu />
+    <div class="card m-5">
+      <EmployeeLanding />
+    </div>
+  </div>
+  <DynamicDialog />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import EmployeeLanding from "./components/EmployeeLanding.vue";
+import MainMenu from "./components/common/MainMenu.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    EmployeeLanding,
+    MainMenu,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
 }
 </style>
